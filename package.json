@@ -16,5 +16,8 @@
 	},
 	"devDependencies": {
 		"@wordpress/scripts": "^27.7.0"
+	},
+	"dependencies": {
+		"@tabler/icons-react": "^3.2.0"
 	}
 }

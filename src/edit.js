@@ -11,7 +11,10 @@ import { __ } from '@wordpress/i18n';
  *
  * @see https://developer.wordpress.org/block-editor/reference-guides/packages/packages-block-editor/#useblockprops
  */
-import { useBlockProps } from '@wordpress/block-editor';
+import { useBlockProps, MediaUpload, MediaUploadCheck } from '@wordpress/block-editor';
+import { Button, Modal, Placeholder } from '@wordpress/components';
+import { useState } from '@wordpress/element';
+import { IconUpload } from '@tabler/icons-react';
 
 /**
  * Lets webpack process CSS, SASS or SCSS files referenced in JavaScript files.
@@ -30,12 +33,50 @@ import './editor.scss';
  * @return {Element} Element to render.
  */
 export default function Edit() {
+	const [isOpen, setOpen] = useState(false);
+	const openModal = () => setOpen(true);
+	const closeModal = () => setOpen(false);
 	return (
-		<p { ...useBlockProps() }>
-			{ __(
-				'Bloomedge Icon Library – hello from the editor!',
-				'bloomedge-icon-library'
-			) }
-		</p>
+		<>
+			<div {...useBlockProps()}>
+				<Placeholder
+					icon={<IconUpload stroke={2} />}
+					instructions="Choose Icon or Drag images, upload new ones or select files from your library."
+					label="BloomEdge Icon Library"
+				>
+					<div>
+						<Button
+							variant="primary"
+							onClick={openModal}
+							style={{ gap: '10px' }}
+						>
+							Icon Library
+							<IconUpload stroke={2} />
+						</Button>
+						<MediaUploadCheck>
+							<MediaUpload
+								onSelect={(media) =>
+									console.log('selected', media)
+								}
+								allowedTypes={['image/svg', 'image']}
+								value={''}
+								render={({ open }) => (
+									<Button onClick={open}>Insert Custom Icon</Button>
+								)}
+							/>
+						</MediaUploadCheck>
+					</div>
+				</Placeholder>
+
+			</div>
+
+			{isOpen && (
+				<Modal title="BloomEdge Icon Library" onRequestClose={closeModal}>
+					<Button variant="secondary" onClick={closeModal}>
+						My custom close button
+					</Button>
+				</Modal>
+			)}
+		</>
 	);
 }
