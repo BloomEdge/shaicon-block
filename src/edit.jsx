@@ -56,14 +56,15 @@ import {
 
 import "./editor.scss";
 import BrandIcon from "./icon";
+import { tablerIcons } from "./icons";
 
 export default function Edit({
 	clientId,
 	attributes,
-	iconBackgroundColor,
-	iconColor,
 	setAttributes,
+	iconBackgroundColor,
 	setIconBackgroundColor,
+	iconColor,
 	setIconColor,
 }) {
 	const {
@@ -93,21 +94,8 @@ export default function Edit({
 
 	const handleClose = (i) => {
 		closeModal();
-		setAttributes({ icon: i });
+		setAttributes({ icon: i.icon, iconName: i.name, title: i.title });
 	}
-
-	const iconList = [];
-
-	for (let i = 0; i < 100; i++) {
-		iconList.push(
-			<div className="be-block-icon-panel__grid-columns" key={i} onClick={() => handleClose(i)}>
-				<IconAdjustmentsAlt stroke={2} />
-				<span>Name: {i + 1}</span>
-			</div>
-		)
-	}
-
-	console.log("Name:", iconName);
 
 	useEffect(() => {
 		// If percentWidth is set (deprecated in v1.4.0), set as width value
@@ -272,77 +260,77 @@ export default function Edit({
 
 	const blockProps = useBlockProps();
 
+	console.log(icon);
+
 	return (
 		<>
-			<div {...blockProps}>
-				<BlockControls group="block">
-					<JustifyToolbar
-						allowedControls={['left', 'center', 'right']}
-						value={itemsJustification}
-						onChange={(value) =>
-							setAttributes({ itemsJustification: value })
+			<BlockControls group="block">
+				<JustifyToolbar
+					allowedControls={['left', 'center', 'right']}
+					value={itemsJustification}
+					onChange={(value) =>
+						setAttributes({ itemsJustification: value })
+					}
+				/>
+			</BlockControls>
+
+			<BlockControls>
+				<ToolbarGroup>
+					<ToolbarButton
+						name="link"
+						icon={<IconLink />}
+						title={__('Link', 'icon-block')}
+						shortcut={displayShortcut.primary('k')}
+						onClick={startEditing}
+					// isActive={isURLSet}
+					/>
+				</ToolbarGroup>
+				<ToolbarGroup className="components-toolbar-group">
+					<ToolbarButton
+						className={`outermost-icon-block__rotate-button-${rotate}`}
+						icon={<IconRotateClockwise2 />}
+						label={__('Rotate', 'icon-block')}
+						onClick={() => setRotate(rotate)}
+						isPressed={rotate}
+					/>
+					<ToolbarButton
+						icon={<IconFlipHorizontal />}
+						label={__('Flip Horizontal', 'icon-block')}
+						onClick={() =>
+							setAttributes({
+								flipHorizontal: !flipHorizontal,
+							})
 						}
-					/>					
-				</BlockControls>
-
-				<BlockControls>
-					<ToolbarGroup>
+						isPressed={flipHorizontal}
+					/>
+					<ToolbarButton
+						icon={<IconFlipVertical />}
+						label={__('Flip Vertical', 'icon-block')}
+						onClick={() =>
+							setAttributes({
+								flipVertical: !flipVertical,
+							})
+						}
+						isPressed={flipVertical}
+					/>
+				</ToolbarGroup>
+				<ToolbarGroup>
+					{enableCustomIcons || isSVGUploadAllowed ? (
+						replaceDropdown
+					) : (
 						<ToolbarButton
-							name="link"
-							icon={<IconLink />}
-							title={__('Link', 'icon-block')}
-							shortcut={displayShortcut.primary('k')}
-							onClick={startEditing}
-							// isActive={isURLSet}
-						/>
-					</ToolbarGroup>
-					<ToolbarGroup className="components-toolbar-group">
-						<ToolbarButton
-							className={`outermost-icon-block__rotate-button-${rotate}`}
-							icon={<IconRotateClockwise2 />}
-							label={__('Rotate', 'icon-block')}
-							onClick={() => setRotate(rotate)}
-							isPressed={rotate}
-						/>
-						<ToolbarButton
-							icon={<IconFlipHorizontal />}
-							label={__('Flip Horizontal', 'icon-block')}
-							onClick={() =>
-								setAttributes({
-									flipHorizontal: !flipHorizontal,
-								})
-							}
-							isPressed={flipHorizontal}
-						/>
-						<ToolbarButton
-							icon={<IconFlipVertical />}
-							label={__('Flip Vertical', 'icon-block')}
-							onClick={() =>
-								setAttributes({
-									flipVertical: !flipVertical,
-								})
-							}
-							isPressed={flipVertical}
-						/>
-					</ToolbarGroup>
-					<ToolbarGroup>
-						{enableCustomIcons || isSVGUploadAllowed ? (
-							replaceDropdown
-						) : (
-							<ToolbarButton
-								onClick={() => {
-									setInserterOpen(true);
-								}}
-							>
-								{__('Replace', 'icon-block')}
-							</ToolbarButton>
-						)}
-					</ToolbarGroup>
-				</BlockControls>
+							onClick={() => {
+								setInserterOpen(true);
+							}}
+						>
+							{__('Replace', 'icon-block')}
+						</ToolbarButton>
+					)}
+				</ToolbarGroup>
+			</BlockControls>
 
-
-
-				{!icon ? (
+			<div {...blockProps}>
+				{!icon && iconName ? (
 					<Placeholder
 						icon={<BrandIcon />}
 						instructions="Choose Icon or Drag images, upload new ones or select files from your library."
@@ -359,7 +347,9 @@ export default function Edit({
 							</Button>
 							<MediaUploadCheck>
 								<MediaUpload
-									onSelect={(media) => console.log("selected", media)}
+									onSelect={(image) => {
+										setAttributes({ icon: image });
+									}}
 									allowedTypes={["image/svg", "image"]}
 									value={""}
 									render={({ open }) => (
@@ -370,7 +360,13 @@ export default function Edit({
 						</div>
 					</Placeholder>
 				) : (
-					<div onClick={openModal}>Name: {icon}</div>
+					<>
+						{!icon.url ? (
+							<div onClick={openModal}>{icon ? <attributes.icon /> : null}</div>
+						) : (
+							<img src={icon.url} alt={icon.title ? icon.title : 'image'} />
+						)}
+					</>
 				)}
 			</div>
 
@@ -429,14 +425,22 @@ export default function Edit({
 
 						<div className="be-block-icon-panel__content">
 							<div className="be-block-icon-panel__grid">
-								{iconList}
+								{
+									tablerIcons.map((item) => {
+										const Icon = item.icon;
+										return (
+											<div className="be-block-icon-panel__grid-columns" key={item.name} onClick={() => handleClose(item)}>
+												<Icon />
+												<span>{item.title}</span>
+											</div>
+										)
+									})
+								}
 							</div>
 						</div>
 					</div>
 				</Modal>
 			)}
-
-
 		</>
 	);
 }

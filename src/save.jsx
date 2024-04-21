@@ -17,9 +17,10 @@ import { useBlockProps } from '@wordpress/block-editor';
  */
 export default function save({ attributes }) {
 	const { icon } = attributes;
+	const Icons = icon;
 	return (
 		<p {...useBlockProps.save()}>
-			Name: {icon}
+			<Icons />
 		</p>
 	);
 }
