@@ -37,7 +37,7 @@ add_filter('block_categories_all', 'bloomedge_icon_block_category', 10, 2);
 add_filter('wp_check_filetype_and_ext', function ($data, $file, $filename, $mimes) {
 
 	global $wp_version;
-	if ($wp_version !== '6.5.2') {
+	if ($wp_version !== '6.5') {
 		return $data;
 	}
 

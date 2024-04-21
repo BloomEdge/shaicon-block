@@ -15,10 +15,11 @@ import { useBlockProps } from '@wordpress/block-editor';
  *
  * @return {Element} Element to render.
  */
-export default function save() {
+export default function save({ attributes }) {
+	const { icon } = attributes;
 	return (
-		<p { ...useBlockProps.save() }>
-			{ 'Bloomedge Icon Library – hello from the saved content!' }
+		<p {...useBlockProps.save()}>
+			Name: {icon}
 		</p>
 	);
 }

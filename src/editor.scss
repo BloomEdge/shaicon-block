@@ -4,6 +4,126 @@
  * Replace them with your own styles or remove the file completely.
  */
 
-.wp-block-bloomedge-bloomedge-icon-library {
-	border: 1px dotted #f00;
+.components-popover {
+  .tabler-icon {
+    fill: transparent;
+  }
+}
+
+.be-block-icon__modal {
+  .has-scrolled-content {
+    &:not(.hide-header) {
+      border-bottom-color: 1px solid #cbd9e1;
+    }
+  }
+
+  .components-modal__content {
+    padding-left: 0;
+  }
+
+  .be-block-icon-panel {
+    height: 100%;
+
+    &__sidebar {
+      display: none;
+      position: fixed;
+      top: 85px;
+      bottom: 0;
+
+      @media (min-width: 900px) {
+        display: block;
+      }
+
+      .components-menu-group {
+        padding: 0 25px;
+      }
+    }
+
+    &__content {
+      display: flex;
+      flex-direction: column;
+      flex-shrink: 0;
+      overflow: auto;
+      padding-right: 32px;
+      padding-top: 24px;
+      width: 100%;
+      margin-inline-start: 300px;
+      // height: 100vh;
+
+      @media (min-width: 900px) {
+        width: calc(100% - 280px);
+      }
+    }
+
+    &__searchbar {
+      position: sticky;
+      top: 0;
+      z-index: 10;
+      display: grid;
+      grid-template-columns: repeat(6, 1fr);
+      align-items: center;
+      gap: 24px;
+      width: 100%;
+      margin-inline-start: 280px;
+      padding: 12px 0;
+      background-color: #fff;
+
+      @media (min-width: 900px) {
+        width: calc(100% - 280px);
+      }
+
+      .components-base-control {
+        margin-bottom: 0;
+      }
+
+      .components-search-control {
+        grid-column: span 4 / span 4;
+
+        .components-input-control__container {
+          border-radius: 8px;
+        }
+
+        .components-input-control__input {
+          height: 56px !important;
+          font-size: 16px !important;
+        }
+      }
+
+      .components-range-control {
+        grid-column: span 2 / span 2;
+      }
+    }
+  }
+
+  .be-block-icon-panel {
+    &__grid {
+      display: grid;
+      grid-template-columns: repeat(auto-fit, minmax(125px, 1fr));
+      gap: 24px;
+    }
+    &__grid-columns {
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      justify-content: space-evenly;
+      border-radius: 4px;
+      text-align: center;
+      color: inherit;
+      padding: 8px;
+      min-height: 112px;
+      text-decoration: none;
+      border: 1px solid #cbd9e1;
+      background: var(--color-bg);
+      transition: border-color 0.3s;
+      position: relative;
+      aspect-ratio: 1;
+      cursor: pointer;
+
+      &:hover {
+        border-color: var(--color-primary);
+        // transition-delay: 0.3s;
+        color: inherit;
+      }
+    }
+  }
 }
