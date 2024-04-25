@@ -1,13 +1,10 @@
 {
-	"$schema": "https://schemas.wp.org/trunk/block.json",
 	"apiVersion": 3,
-	"name": "bloomedge/bloomedge-icon-library",
-	"version": "1.0.0",
-	"title": "Bloomedge Icon Library",
-	"category": "bloomedge-icon-library",
-	"icon": "smiley",
-	"description": "Example block scaffolded with Create Block tool.",
-	"example": {},
+	"name": "bloomedge/bloom-icon-block",
+	"title": "Bloom Icon",
+	"category": "media",
+	"description": "Insert an SVG icon or graphic.",
+	"keywords": [ "icon", "svg" ],
 	"attributes": {
 		"icon": {
 			"type": "string",
@@ -73,7 +70,7 @@
 			"type": "boolean"
 		},
 		"width": {
-			"type": ["string", "number"]
+			"type": [ "string", "number" ]
 		},
 		"height": {
 			"type": "string"
@@ -109,9 +106,8 @@
 			}
 		}
 	},
-	"textdomain": "bloomedge-icon-library",
+	"textdomain": "icon-block",
 	"editorScript": "file:./index.js",
-	"editorStyle": "file:./index.css",
-	"style": "file:./style-index.css",
-	"viewScript": "file:./view.js"
+	"editorStyle": "file:./editor.css",
+	"style": "file:./style.css"
 }
