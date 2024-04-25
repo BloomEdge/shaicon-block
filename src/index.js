@@ -63,7 +63,7 @@ const addToNavigation = ( blockSettings, blockName ) => {
 			...blockSettings,
 			allowedBlocks: [
 				...( blockSettings.allowedBlocks ?? [] ),
-				'bloomedge/icon-block',
+				'bloomedge/bloom-icon-block',
 			],
 		};
 	}
