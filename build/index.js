@@ -8599,19 +8599,23 @@ function InserterModal(props) {
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "icon-inserter__sidebar"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
-    className: "icon-inserter__sidebar__search"
-  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.SearchControl, {
-    value: searchInput,
-    onChange: setSearchInput
-  })), preparedTypes.map(type => renderIconTypeCategories(type))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "icon-inserter__sidebar-scroll"
+  }, preparedTypes.map(type => renderIconTypeCategories(type)), preparedTypes.map(type => renderIconTypeCategories(type)))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "icon-inserter__content"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "icon-inserter__content-header"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "icon-inserter__content-search-wrapper"
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+    className: "icon-inserter__content-search"
+  }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)(_wordpress_components__WEBPACK_IMPORTED_MODULE_4__.SearchControl, {
+    value: searchInput,
+    onChange: setSearchInput
+  })), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "search-results"
   }, searchInput && (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__.sprintf)(
-  // translators: %1$s: Number of icons retruned from search, %2$s: the search input
-  (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__._n)('%1$s search result for "%2$s"', '%1$s search results for "%2$s"', shownIcons.length, 'bloom-icon-block'), shownIcons.length, searchInput)), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
+  // translators: %1$s: Number of icons returned from search, %2$s: the search input
+  (0,_wordpress_i18n__WEBPACK_IMPORTED_MODULE_3__._n)('%1$s search result for "%2$s"', '%1$s search results for "%2$s"', shownIcons.length, 'bloom-icon-block'), shownIcons.length, searchInput))), (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "icon-controls"
   }, (0,react__WEBPACK_IMPORTED_MODULE_0__.createElement)("div", {
     className: "icon-controls__size"

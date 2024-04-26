@@ -246,32 +246,40 @@ export default function InserterModal( props ) {
 					'is-searching': searchInput,
 				} ) }
 			>
-				<div className="icon-inserter__sidebar">
-					<div className="icon-inserter__sidebar__search">
-						<SearchControl
-							value={ searchInput }
-							onChange={ setSearchInput }
-						/>
+				<div className="icon-inserter__sidebar">					
+					<div className='icon-inserter__sidebar-scroll'>
+						{preparedTypes.map((type) =>
+							renderIconTypeCategories(type)
+						)}
+						{preparedTypes.map((type) =>
+							renderIconTypeCategories(type)
+						)}
 					</div>
-					{ preparedTypes.map( ( type ) =>
-						renderIconTypeCategories( type )
-					) }
 				</div>
+				
 				<div className="icon-inserter__content">
 					<div className="icon-inserter__content-header">
-						<div className="search-results">
-							{ searchInput &&
-								sprintf(
-									// translators: %1$s: Number of icons retruned from search, %2$s: the search input
-									_n(
-										'%1$s search result for "%2$s"',
-										'%1$s search results for "%2$s"',
+						<div className='icon-inserter__content-search-wrapper'>
+							<div className="icon-inserter__content-search">
+								<SearchControl
+									value={searchInput}
+									onChange={setSearchInput}
+								/>
+							</div>
+							<div className="search-results">
+								{ searchInput &&
+									sprintf(
+										// translators: %1$s: Number of icons returned from search, %2$s: the search input
+										_n(
+											'%1$s search result for "%2$s"',
+											'%1$s search results for "%2$s"',
+											shownIcons.length,
+											'bloom-icon-block'
+										),
 										shownIcons.length,
-										'bloom-icon-block'
-									),
-									shownIcons.length,
-									searchInput
-								) }
+										searchInput
+									) }
+							</div>
 						</div>
 						<div className="icon-controls">
 							<div className="icon-controls__size">
