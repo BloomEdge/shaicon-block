@@ -17,6 +17,7 @@
 		"update-pot": "wp i18n make-pot . languages/icon-block.pot --exclude=src"
 	},
 	"dependencies": {
+		"@tabler/icons-react": "^3.2.0",
 		"@wordpress/block-editor": "^12.16.0",
 		"@wordpress/blocks": "^12.25.0",
 		"@wordpress/components": "^25.14.0",

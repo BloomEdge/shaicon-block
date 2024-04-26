@@ -22,7 +22,7 @@ import { Icon, blockDefault } from '@wordpress/icons';
 /**
  * Internal dependencies
  */
-import getIcons from './../../icons';
+import getIcons, { getTablerIcons } from './../../icons';
 import {
 	flattenIconsArray,
 	getIconTypes,
@@ -34,7 +34,9 @@ export default function InserterModal( props ) {
 	const { isInserterOpen, setInserterOpen, attributes, setAttributes } =
 		props;
 	const iconsByType = getIcons();
+	const allTablerIcons = getTablerIcons();
 	const iconTypes = getIconTypes( iconsByType );
+	console.log('allTablerIcons', allTablerIcons)
 
 	// Get the default type, and if there is none, get the first type.
 	let defaultType = iconTypes.filter( ( type ) => type.isDefault );

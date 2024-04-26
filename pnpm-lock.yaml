@@ -8,6 +8,9 @@ importers:
 
   .:
     dependencies:
+      '@tabler/icons-react':
+        specifier: ^3.2.0
+        version: 3.2.0(react@18.3.0)
       '@wordpress/block-editor':
         specifier: ^12.16.0
         version: 12.24.0(@types/react@18.2.79)(react-dom@18.3.0(react@18.3.0))(react@18.3.0)
@@ -1252,6 +1255,14 @@ packages:
   '@svgr/webpack@8.1.0':
     resolution: {integrity: sha512-LnhVjMWyMQV9ZmeEy26maJk+8HTIbd59cH4F2MJ439k9DqejRisfFNGAPvRYlKETuh9LrImlS8aKsBgKjMA8WA==}
     engines: {node: '>=14'}
+
+  '@tabler/icons-react@3.2.0':
+    resolution: {integrity: sha512-b1mZT1XpZrzvbM+eFe1YbYbxkzgJ18tM4knZKqXh0gnHDZ6XVLIH3TzJZ3HZ7PTkUqZLZ7XcGae3qQVGburlBw==}
+    peerDependencies:
+      react: '>= 16'
+
+  '@tabler/icons@3.2.0':
+    resolution: {integrity: sha512-h8GQ2rtxgiSjltrVz4vcopAxTPSpUSUi5nBfJ09H3Bk4fJk6wZ/dVUjzhv/BHfDwGTkAxZBiYe/Q/T95cPeg5Q==}
 
   '@tannin/compile@1.1.0':
     resolution: {integrity: sha512-n8m9eNDfoNZoxdvWiTfW/hSPhehzLJ3zW7f8E7oT6mCROoMNWCB4TYtv041+2FMAxweiE0j7i1jubQU4MEC/Gg==}
@@ -8032,6 +8043,13 @@ snapshots:
     transitivePeerDependencies:
       - supports-color
       - typescript
+
+  '@tabler/icons-react@3.2.0(react@18.3.0)':
+    dependencies:
+      '@tabler/icons': 3.2.0
+      react: 18.3.0
+
+  '@tabler/icons@3.2.0': {}
 
   '@tannin/compile@1.1.0':
     dependencies:
