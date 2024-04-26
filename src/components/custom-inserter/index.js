@@ -113,7 +113,10 @@ export default function CustomInserterModal( props ) {
 					</div>
 					<div className="icon-insert-buttons">
 						<Button
-							label={ __( 'Clear custom icon', 'bloom-icon-block' ) }
+							label={ __(
+								'Clear custom icon',
+								'bloom-icon-block'
+							) }
 							isSecondary
 							disabled={ ! customIcon }
 							onClick={ () => setCustomIcon( '' ) }
@@ -121,7 +124,10 @@ export default function CustomInserterModal( props ) {
 							{ __( 'Clear', 'bloom-icon-block' ) }
 						</Button>
 						<Button
-							label={ __( 'Insert custom icon', 'bloom-icon-block' ) }
+							label={ __(
+								'Insert custom icon',
+								'bloom-icon-block'
+							) }
 							isPrimary
 							disabled={ ! isSVG || ! customIcon }
 							onClick={ insertCustomIcon }

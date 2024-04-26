@@ -276,7 +276,10 @@ export function Edit( props ) {
 								} }
 								icon={ code }
 							>
-								{ __( 'Add/edit custom icon', 'bloom-icon-block' ) }
+								{ __(
+									'Add/edit custom icon',
+									'bloom-icon-block'
+								) }
 							</MenuItem>
 						) }
 					</MenuGroup>
@@ -331,7 +334,10 @@ export function Edit( props ) {
 						/>
 						<ToolbarButton
 							icon={ flipH }
-							label={ __( 'Flip Horizontal', 'bloom-icon-block' ) }
+							label={ __(
+								'Flip Horizontal',
+								'bloom-icon-block'
+							) }
 							onClick={ () =>
 								setAttributes( {
 									flipHorizontal: ! flipHorizontal,

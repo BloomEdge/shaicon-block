@@ -36,7 +36,6 @@ export default function InserterModal( props ) {
 	const iconsByType = getIcons();
 	const allTablerIcons = getTablerIcons();
 	const iconTypes = getIconTypes( iconsByType );
-	console.log('allTablerIcons', allTablerIcons)
 
 	// Get the default type, and if there is none, get the first type.
 	let defaultType = iconTypes.filter( ( type ) => type.isDefault );
@@ -248,24 +247,24 @@ export default function InserterModal( props ) {
 					'is-searching': searchInput,
 				} ) }
 			>
-				<div className="icon-inserter__sidebar">					
-					<div className='icon-inserter__sidebar-scroll'>
-						{preparedTypes.map((type) =>
-							renderIconTypeCategories(type)
-						)}
-						{preparedTypes.map((type) =>
-							renderIconTypeCategories(type)
-						)}
+				<div className="icon-inserter__sidebar">
+					<div className="icon-inserter__sidebar-scroll">
+						{ preparedTypes.map( ( type ) =>
+							renderIconTypeCategories( type )
+						) }
+						{ preparedTypes.map( ( type ) =>
+							renderIconTypeCategories( type )
+						) }
 					</div>
 				</div>
-				
+
 				<div className="icon-inserter__content">
 					<div className="icon-inserter__content-header">
-						<div className='icon-inserter__content-search-wrapper'>
+						<div className="icon-inserter__content-search-wrapper">
 							<div className="icon-inserter__content-search">
 								<SearchControl
-									value={searchInput}
-									onChange={setSearchInput}
+									value={ searchInput }
+									onChange={ setSearchInput }
 								/>
 							</div>
 							<div className="search-results">

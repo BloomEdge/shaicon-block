@@ -66,7 +66,9 @@ export default function OptionsPanelHeader( props ) {
 			{ () => (
 				<>
 					{ defaultOptions.length !== 0 && (
-						<MenuGroup label={ __( 'Defaults', 'bloom-icon-block' ) }>
+						<MenuGroup
+							label={ __( 'Defaults', 'bloom-icon-block' ) }
+						>
 							{ defaultOptions.map( ( option, index ) => (
 								<DefaultOptionMenuItem
 									key={ index }
