@@ -22,7 +22,7 @@ import { Icon, blockDefault } from '@wordpress/icons';
 /**
  * Internal dependencies
  */
-import getIcons, { getTablerIcons } from './../../icons';
+import getIcons from './../../icons';
 import {
 	flattenIconsArray,
 	getIconTypes,
@@ -34,7 +34,6 @@ export default function InserterModal( props ) {
 	const { isInserterOpen, setInserterOpen, attributes, setAttributes } =
 		props;
 	const iconsByType = getIcons();
-	const allTablerIcons = getTablerIcons();
 	const iconTypes = getIconTypes( iconsByType );
 
 	// Get the default type, and if there is none, get the first type.
@@ -249,9 +248,6 @@ export default function InserterModal( props ) {
 			>
 				<div className="icon-inserter__sidebar">
 					<div className="icon-inserter__sidebar-scroll">
-						{ preparedTypes.map( ( type ) =>
-							renderIconTypeCategories( type )
-						) }
 						{ preparedTypes.map( ( type ) =>
 							renderIconTypeCategories( type )
 						) }

@@ -44,3 +44,5 @@ node_modules/
 # Composer #
 ############
 vendor/
+
+/build

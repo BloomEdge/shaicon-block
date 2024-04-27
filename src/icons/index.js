@@ -2015,7 +2015,7 @@ const icons = [
 		isDefault: false,
 		type: 'wordpress',
 		title: __( 'WordPress', 'bloom-icon-block' ),
-		icons: [].concat( wordpressSocialIcons, wordpressIcons, tablerIcons ),
+		icons: [].concat( wordpressSocialIcons, wordpressIcons ),
 		categories: [
 			{
 				name: 'arrows',
@@ -2040,11 +2040,7 @@ const icons = [
 			{
 				name: 'media',
 				title: __( 'Media', 'bloom-icon-block' ),
-			},
-			{
-				name: 'others',
-				title: __( 'Others', 'bloom-icon-block' ),
-			},
+			}
 		],
 	},
 ];
@@ -2091,7 +2087,4 @@ const tablerIconsCat = [
 // Allow third parties to add their own icon types via filter.
 export default function getIcons() {
 	return applyFilters( 'iconBlock.icons', icons );
-}
-export function getTablerIcons() {
-	return applyFilters( 'bloomIconBlock.tablerIcons', tablerIconsCat );
 }
