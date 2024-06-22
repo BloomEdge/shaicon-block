@@ -251,6 +251,10 @@
 			}
 
 			.icons-list__item {
+				.bloom-icon {
+					fill: none;
+				}
+
 				&.is-active {
 					background-color: var(--wp-admin-theme-color);
 					color: rgb(255 255 255 / 80%);
@@ -261,6 +265,11 @@
 
 					svg {
 						fill: #fff;
+					}
+
+					.bloom-icon {
+						fill: none;
+						color: #fff;
 					}
 
 					&.has-no-icon-fill {
@@ -460,6 +469,10 @@
 					.components-button {
 						padding: 0px;
 						min-width: 24px;
+
+						.bloom-icon {
+							fill: none;
+						}
 					}
 				}
 			}

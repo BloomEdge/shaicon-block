@@ -311,6 +311,7 @@ import {
 // Temporary icon specifications that are not yet in the NPM package.
 import { sparkles } from './wordpress/temp';
 import { IconABOff, iconAB2 } from './tabler-icon';
+import { SolarIconData } from './solar-icon/data';
 
 const wordpressSocialIcons = [
 	{
@@ -1993,29 +1994,29 @@ const wordpressIcons = [
 	},
 ];
 
-export const tablerIcons = [
-	{
-		name: 'iconAB2',
-		title: __( 'a-b-2', 'bloom-icon-block' ),
-		icon: iconAB2,
-		categories: [ 'others' ],
-		type: 'tablerIcon',
-	},
-	{
-		name: 'IconABOff',
-		title: __( 'a-b-off', 'bloom-icon-block' ),
-		icon: IconABOff,
-		categories: [ 'others' ],
-		type: 'tablerIcon',
-	},
-];
+// export const tablerIcons = [
+// 	{
+// 		name: 'iconAB2',
+// 		title: __( 'a-b-2', 'bloom-icon-block' ),
+// 		icon: iconAB2,
+// 		categories: [ 'others' ],
+// 		type: 'tablerIcon',
+// 	},
+// 	{
+// 		name: 'IconABOff',
+// 		title: __( 'a-b-off', 'bloom-icon-block' ),
+// 		icon: IconABOff,
+// 		categories: [ 'others' ],
+// 		type: 'tablerIcon',
+// 	},
+// ];
 
 const icons = [
 	{
 		isDefault: false,
 		type: 'wordpress',
-		title: __( 'WordPress', 'bloom-icon-block' ),
-		icons: [].concat( wordpressSocialIcons, wordpressIcons ),
+		title: __( 'Categories', 'bloom-icon-block' ),
+		icons: [].concat( wordpressSocialIcons, wordpressIcons, SolarIconData ),
 		categories: [
 			{
 				name: 'arrows',
@@ -2040,46 +2041,11 @@ const icons = [
 			{
 				name: 'media',
 				title: __( 'Media', 'bloom-icon-block' ),
+			},
+			{
+				name: 'notification',
+				title: __( 'Notification', 'bloom-icon-block' ),
 			}
-		],
-	},
-];
-
-const tablerIconsCat = [
-	{
-		isDefault: false,
-		type: 'tablerIcon',
-		title: __( 'Tabler Icon', 'bloom-icon-block' ),
-		icons: [].concat( tablerIcons ),
-		categories: [
-			{
-				name: 'arrows',
-				title: __( 'Arrows', 'bloom-icon-block' ),
-			},
-			{
-				name: 'blocks',
-				title: __( 'Blocks', 'bloom-icon-block' ),
-			},
-			{
-				name: 'devices',
-				title: __( 'Devices', 'bloom-icon-block' ),
-			},
-			{
-				name: 'editor',
-				title: __( 'Editor', 'bloom-icon-block' ),
-			},
-			{
-				name: 'logos',
-				title: __( 'Logos', 'bloom-icon-block' ),
-			},
-			{
-				name: 'media',
-				title: __( 'Media', 'bloom-icon-block' ),
-			},
-			{
-				name: 'others',
-				title: __( 'Others', 'bloom-icon-block' ),
-			},
 		],
 	},
 ];
