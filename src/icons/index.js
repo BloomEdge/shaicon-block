@@ -310,7 +310,6 @@ import {
 
 // Temporary icon specifications that are not yet in the NPM package.
 import { sparkles } from './wordpress/temp';
-import { IconABOff, iconAB2 } from './tabler-icon';
 import { SolarIconData } from './solar-icon/data';
 
 const wordpressSocialIcons = [
@@ -1993,23 +1992,6 @@ const wordpressIcons = [
 		icon: widget,
 	},
 ];
-
-// export const tablerIcons = [
-// 	{
-// 		name: 'iconAB2',
-// 		title: __( 'a-b-2', 'bloom-icon-block' ),
-// 		icon: iconAB2,
-// 		categories: [ 'others' ],
-// 		type: 'tablerIcon',
-// 	},
-// 	{
-// 		name: 'IconABOff',
-// 		title: __( 'a-b-off', 'bloom-icon-block' ),
-// 		icon: IconABOff,
-// 		categories: [ 'others' ],
-// 		type: 'tablerIcon',
-// 	},
-// ];
 
 const icons = [
 	{

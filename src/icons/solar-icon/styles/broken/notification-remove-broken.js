@@ -1,21 +1,14 @@
-import { Circle, Path, SVG } from "@wordpress/primitives";
+import { Path, SVG } from "@wordpress/primitives";
 
-export const NotificationUnreadLinesBroken = (
+export const NotificationRemoveBroken = (
 	<SVG
 		viewBox="0 0 24 24"
 		fill="none"
 		xmlns="http://www.w3.org/2000/svg"
-		className="bloom-icon bloom-icon-notification-unread-lines-broken"
+		className="bloom-icon bloom-icon-notification-remove-broken"
 	>
-		<Circle cx="19" cy="5" r="3" stroke="currentColor" stroke-width="1.5" />
 		<Path
-			d="M7 14H16"
-			stroke="currentColor"
-			stroke-width="1.5"
-			stroke-linecap="round"
-		/>
-		<Path
-			d="M7 17.5H13"
+			d="M22 2L17 6.99998M17 1.99998L22 6.99996"
 			stroke="currentColor"
 			stroke-width="1.5"
 			stroke-linecap="round"
