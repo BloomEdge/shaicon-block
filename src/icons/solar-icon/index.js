@@ -23,3 +23,12 @@ export * from "./styles/outline/notification-lines-remove-outline";
 export * from "./styles/outline/notification-bell-outline";
 export * from "./styles/outline/notification-bell-bing-outline";
 export * from "./styles/outline/notification-bell-off-outline";
+
+// Bold
+export * from "./styles/bold/notification-unread-bold";
+export * from "./styles/bold/notification-unread-lines-bold";
+export * from "./styles/bold/notification-remove-bold";
+export * from "./styles/bold/notification-lines-remove-bold";
+export * from "./styles/bold/notification-bell-bold";
+export * from "./styles/bold/notification-bell-bing-bold";
+export * from "./styles/bold/notification-bell-off-bold";
