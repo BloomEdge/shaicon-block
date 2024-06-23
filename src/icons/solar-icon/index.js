@@ -1,5 +1,5 @@
 export * from "./notification/broken/unread";
-export * from "./notification/broken/unread-lines/";
+export * from "./notification/broken/unread-lines";
 export * from "./notification/broken/remove";
 export * from "./notification/broken/lines-remove";
 export * from "./notification/broken/bell";
@@ -32,3 +32,12 @@ export * from "./notification/bold/lines-remove";
 export * from "./notification/bold/bell";
 export * from "./notification/bold/bell-bing";
 export * from "./notification/bold/bell-off";
+
+// Bold Duotone
+export * from "./notification/bold-duotone/unread";
+export * from "./notification/bold-duotone/unread-lines";
+export * from "./notification/bold-duotone/remove";
+export * from "./notification/bold-duotone/lines-remove";
+export * from "./notification/bold-duotone/bell";
+export * from "./notification/bold-duotone/bell-bing";
+export * from "./notification/bold-duotone/bell-off";
