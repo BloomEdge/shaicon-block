@@ -4,629 +4,635 @@
 
 // Editor specific styles for the block itself.
 .wp-block-bloomedge-bloom-icon-block {
-	// Dropzone styles.
-	.components-drop-zone__content {
-		container-type: size;
 
-		.components-drop-zone__content-icon {
-			width: 24px;
-			margin-bottom: 10px;
-		}
+    // Dropzone styles.
+    .components-drop-zone__content {
+        container-type: size;
 
-		// Only show the icon if the dropzone is too small.
-		@container (max-width: 150px) {
-			.components-drop-zone__content-icon {
-				margin-bottom: 0;
-			}
+        .components-drop-zone__content-icon {
+            width: 24px;
+            margin-bottom: 10px;
+        }
 
-			.components-drop-zone__content-text {
-				display: none;
-			}
-		}
+        // Only show the icon if the dropzone is too small.
+        @container (max-width: 150px) {
+            .components-drop-zone__content-icon {
+                margin-bottom: 0;
+            }
 
-		@container (max-height: 120px) {
-			.components-drop-zone__content-icon {
-				margin-bottom: 0;
-			}
+            .components-drop-zone__content-text {
+                display: none;
+            }
+        }
 
-			.components-drop-zone__content-text {
-				display: none;
-			}
-		}
-	}
+        @container (max-height: 120px) {
+            .components-drop-zone__content-icon {
+                margin-bottom: 0;
+            }
 
-	// Placeholder styles.
-	.components-placeholder {
-		line-height: normal;
-		min-height: 160px;
+            .components-drop-zone__content-text {
+                display: none;
+            }
+        }
+    }
 
-		// Needed to match the Core styling while supporting icon rotation.
-		svg.components-placeholder__illustration {
-			transform: translate(-50%, -50%);
-		}
+    // Placeholder styles.
+    .components-placeholder {
+        line-height: normal;
+        min-height: 160px;
 
-		.components-placeholder__label {
-			svg {
-				max-width: 24px;
-			}
-		}
-	}
+        // Needed to match the Core styling while supporting icon rotation.
+        svg.components-placeholder__illustration {
+            transform: translate(-50%, -50%);
+        }
 
-	&.is-selected {
-		// Placeholder styles.
-		.components-placeholder {
-			background-color: #fff;
-			border: none;
-			border-radius: 2px;
-			box-shadow: inset 0 0 0 1px #1e1e1e;
-			color: #1e1e1e;
-			filter: none;
+        .components-placeholder__label {
+            svg {
+                max-width: 24px;
+            }
+        }
+    }
 
-			&:before {
-				opacity: 0;
-			}
+    &.is-selected {
 
-			.components-placeholder__illustration {
-				display: none;
-			}
-		}
-	}
+        // Placeholder styles.
+        .components-placeholder {
+            background-color: #fff;
+            border: none;
+            border-radius: 2px;
+            box-shadow: inset 0 0 0 1px #1e1e1e;
+            color: #1e1e1e;
+            filter: none;
+
+            &:before {
+                opacity: 0;
+            }
+
+            .components-placeholder__illustration {
+                display: none;
+            }
+        }
+    }
 }
 
 .wp-block-bloomedge-icon-inserter__quick-inserter {
-	.icons-list {
-		.icons-list__item {
-			width: 33.33%;
+    .icons-list {
+        .icons-list__item {
+            width: 33.33%;
 
-			// The quick inserter in core does not have border hover effects.
-			&:hover {
-				border-color: transparent;
-			}
-		}
-	}
+            // The quick inserter in core does not have border hover effects.
+            &:hover {
+                border-color: transparent;
+            }
+        }
+    }
 
-	// Temporary fix until updated in core.
-	.block-editor-inserter__no-results {
-		margin-top: 0;
-	}
+    // Temporary fix until updated in core.
+    .block-editor-inserter__no-results {
+        margin-top: 0;
+    }
 
-	// Fix minor gap between search field and icons.
-	.block-editor-inserter__search {
-		& > .components-base-control__field {
-			margin-bottom: 0;
-		}
-	}
+    // Fix minor gap between search field and icons.
+    .block-editor-inserter__search {
+        &>.components-base-control__field {
+            margin-bottom: 0;
+        }
+    }
 }
 
 // Style for the icon library modal.
 .wp-block-bloomedge-icon-inserter__modal {
-	.components-modal__header {
-		border-bottom: 2px solid var(--wp--preset--color--contrast-2, #1e1e1e);
-		padding: 24px 32px;
-	}
-	.components-modal__content {
-		flex: 1 1 0%;
-		overflow: auto;
-		padding: 0px;
+    .components-modal__header {
+        border-bottom: 2px solid var(--wp--preset--color--contrast-2, #1e1e1e);
+        padding: 24px 32px;
+    }
 
-		&:before {
-			margin-bottom: 0;
-		}
-	}
+    .components-modal__content {
+        flex: 1 1 0%;
+        overflow: auto;
+        padding: 0px;
 
-	.icon-inserter {
-		align-items: stretch;
-		display: flex;
-		height: 100%;
-	}
+        &:before {
+            margin-bottom: 0;
+        }
+    }
 
-	.icon-inserter__sidebar {
-		display: none;
-		flex-direction: column;
-		flex-shrink: 0;
-		position: fixed;
-		height: calc(100% - 60px);
-		top: 72px;
+    .icon-inserter {
+        align-items: stretch;
+        display: flex;
+        height: 100%;
+    }
 
-		@media (min-width: 900px) {
-			display: flex;
-		}
+    .icon-inserter__sidebar {
+        display: none;
+        flex-direction: column;
+        flex-shrink: 0;
+        position: fixed;
+        height: calc(100% - 60px);
+        top: 72px;
 
-		&-scroll {
-			overflow-y: scroll;
-			width: 280px;
-			padding: 24px 32px 32px;
-		}
+        @media (min-width: 900px) {
+            display: flex;
+        }
 
-		&__category-type {
-			// Override core component styles.
-			border: none;
+        &-scroll {
+            overflow-y: scroll;
+            width: 280px;
+            padding: 24px 32px 32px;
+        }
 
-			.components-menu-group__label {
-				margin: 0;
-				padding: 16px 12px 16px;
-			}
+        &__category-type {
+            // Override core component styles.
+            border: none;
 
-			.components-menu-item__item {
-				text-transform: capitalize;
-				display: inline-flex;
-				justify-content: space-between;
-				width: 100%;
+            .components-menu-group__label {
+                margin: 0;
+                padding: 16px 12px 16px;
+            }
 
-				& > span {
-					opacity: 0.5;
-				}
-			}
-		}
-	}
+            .components-menu-item__item {
+                text-transform: capitalize;
+                display: inline-flex;
+                justify-content: space-between;
+                width: 100%;
 
-	.icon-inserter__content {
-		display: flex;
-		flex-direction: column;
-		flex-shrink: 0;
-		padding-right: 32px;
-		width: 100%;
+                &>span {
+                    opacity: 0.5;
+                }
+            }
+        }
+    }
 
-		@media (min-width: 900px) {
-			width: calc(100% - 281px);
-			margin-left: 281px;
-		}
+    .icon-inserter__content {
+        display: flex;
+        flex-direction: column;
+        flex-shrink: 0;
+        padding-right: 32px;
+        width: 100%;
 
-		.icon-inserter__content-header {
-			align-items: center;
-			display: flex;
-			justify-content: space-between;
-			gap: 24px;
-			padding: 24px;
-			background: #fff;
-			position: sticky;
-			top: 0;
-			z-index: 1;
+        @media (min-width: 900px) {
+            width: calc(100% - 281px);
+            margin-left: 281px;
+        }
 
-			.icon-inserter__content-search-wrapper {
-				display: flex;
-				flex-direction: column;
-				width: 100%;
-				max-width: 550px;
-			}
+        .icon-inserter__content-header {
+            align-items: center;
+            display: flex;
+            justify-content: space-between;
+            gap: 24px;
+            padding: 24px;
+            background: #fff;
+            position: sticky;
+            top: 0;
+            z-index: 1;
 
-			.search-results {
-				color: #757575;
-			}
+            .icon-inserter__content-search-wrapper {
+                display: flex;
+                flex-direction: column;
+                width: 100%;
+                max-width: 550px;
+            }
 
-			.icon-controls__size {
-				display: flex;
-				align-items: center;
-				margin-right: 6px;
-				display: none;
+            .search-results {
+                color: #757575;
+            }
 
-				@media (min-width: 768px) {
-					display: flex;
-				}
+            .icon-controls__size {
+                display: flex;
+                align-items: center;
+                margin-right: 6px;
+                display: none;
 
-				& > span {
-					margin-right: 16px;
-				}
+                @media (min-width: 768px) {
+                    display: flex;
+                }
 
-				.components-range-control {
-					width: 72px;
-					margin-bottom: 0;
+                &>span {
+                    margin-right: 16px;
+                }
 
-					.components-base-control__field {
-						margin-bottom: 0;
-					}
-				}
-			}
-		}
+                .components-range-control {
+                    width: 72px;
+                    margin-bottom: 0;
 
-		.icons-list {
-			padding: 4px 4px 72px 4px;
-			margin: 0;
-			display: grid;
-			grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+                    .components-base-control__field {
+                        margin-bottom: 0;
+                    }
+                }
+            }
+        }
 
-			@media (min-width: 600px) {
-				grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
-			}
+        .icons-list {
+            padding: 4px 4px 72px 4px;
+            margin: 0;
+            display: grid;
+            grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
 
-			@media (min-width: 900px) {
-				grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
-			}
+            @media (min-width: 600px) {
+                grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+            }
 
-			@media (min-width: 1100px) {
-				grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
-			}
+            @media (min-width: 900px) {
+                grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+            }
 
-			@media (min-width: 1450px) {
-				grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(
-						0,
-						1fr
-					);
-			}
+            @media (min-width: 1100px) {
+                grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+            }
 
-			@media (min-width: 1600px) {
-				grid-template-columns:
-					minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr)
-					minmax(0, 1fr);
-			}
+            @media (min-width: 1450px) {
+                grid-template-columns: minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0,
+                        1fr);
+            }
 
-			.icons-list__item {
-				.bloom-icon {
-					fill: none;
-				}
+            @media (min-width: 1600px) {
+                grid-template-columns:
+                    minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr) minmax(0, 1fr);
+            }
 
-				&.is-active {
-					background-color: var(--wp-admin-theme-color);
-					color: rgb(255 255 255 / 80%);
+            .icons-list__item {
+                .bloom-icon {
+                    fill: none;
+                }
 
-					&:hover {
-						color: #fff !important;
-					}
+                &.is-active {
+                    background-color: var(--wp-admin-theme-color);
+                    color: rgb(255 255 255 / 80%);
 
-					svg {
-						fill: #fff;
-					}
+                    &:hover {
+                        color: #fff !important;
+                    }
 
-					.bloom-icon {
-						fill: none;
-						color: #fff;
-					}
+                    svg {
+                        fill: #fff;
+                    }
 
-					&.has-no-icon-fill {
-						svg {
-							color: #fff;
-							fill: none;
-						}
-					}
-				}
-			}
-		}
+                    .bloom-icon {
+                        fill: none;
+                        color: #fff;
+                    }
 
-		.block-editor-inserter__no-results {
-			height: calc(100% - 56px);
-			margin-top: 0;
-			display: flex;
-			flex-direction: column;
-			justify-content: center;
+                    &.has-no-icon-fill {
+                        svg {
+                            color: #fff;
+                            fill: none;
+                        }
+                    }
+                }
+            }
+        }
 
-			svg {
-				margin: 0 auto;
-			}
-		}
-	}
+        .block-editor-inserter__no-results {
+            height: calc(100% - 56px);
+            margin-top: 0;
+            display: flex;
+            flex-direction: column;
+            justify-content: center;
+
+            svg {
+                margin: 0 auto;
+            }
+        }
+    }
 }
 
 // Styles for the custom SVG inserter modal.
 .wp-block-bloomedge-icon-custom-inserter__modal {
-	.components-modal__content {
-		flex: 1 1 0%;
-		overflow: auto;
-		padding: 0px;
+    .components-modal__content {
+        flex: 1 1 0%;
+        overflow: auto;
+        padding: 0px;
 
-		& > div:nth-child(2) {
-			height: 100%;
-		}
+        &>div:nth-child(2) {
+            height: 100%;
+        }
 
-		&:before {
-			margin-bottom: 0;
-		}
-	}
+        &:before {
+            margin-bottom: 0;
+        }
+    }
 
-	.icon-custom-inserter {
-		align-items: stretch;
-		display: flex;
-		flex-direction: column;
-		gap: 32px;
-		height: 100%;
-		padding: 0 32px 32px;
+    .icon-custom-inserter {
+        align-items: stretch;
+        display: flex;
+        flex-direction: column;
+        gap: 32px;
+        height: 100%;
+        padding: 0 32px 32px;
 
-		@media (min-width: 900px) {
-			flex-direction: row;
-		}
-	}
+        @media (min-width: 900px) {
+            flex-direction: row;
+        }
+    }
 
-	.icon-custom-inserter__content {
-		min-height: 400px;
+    .icon-custom-inserter__content {
+        min-height: 400px;
 
-		@media (min-width: 900px) {
-			width: calc(100% - 400px);
-		}
+        @media (min-width: 900px) {
+            width: calc(100% - 400px);
+        }
 
-		.components-base-control,
-		.components-base-control__field,
-		.components-textarea-control__input {
-			height: 100%;
-		}
+        .components-base-control,
+        .components-base-control__field,
+        .components-textarea-control__input {
+            height: 100%;
+        }
 
-		textarea {
-			resize: none;
-		}
-	}
+        textarea {
+            resize: none;
+        }
+    }
 
-	.icon-custom-inserter__sidebar {
-		flex-shrink: 0;
-		display: flex;
-		flex-direction: column;
-		justify-content: space-between;
+    .icon-custom-inserter__sidebar {
+        flex-shrink: 0;
+        display: flex;
+        flex-direction: column;
+        justify-content: space-between;
 
-		@media (min-width: 900px) {
-			width: 400px;
-		}
+        @media (min-width: 900px) {
+            width: 400px;
+        }
 
-		.icon-preview__window {
-			border: 1px solid #ddd;
-			display: flex;
-			justify-content: center;
-			align-items: center;
-			padding: 20px;
-			min-height: 250px;
-			max-height: 400px;
-			overflow: scroll;
+        .icon-preview__window {
+            border: 1px solid #ddd;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            padding: 20px;
+            min-height: 250px;
+            max-height: 400px;
+            overflow: scroll;
 
-			&.is-default {
-				svg {
-					opacity: 0.3;
-				}
-			}
+            &.is-default {
+                svg {
+                    opacity: 0.3;
+                }
+            }
 
-			svg {
-				max-width: 100%;
-			}
-		}
+            svg {
+                max-width: 100%;
+            }
+        }
 
-		.icon-controls {
-			display: flex;
-			justify-content: center;
-			padding: 12px 24px;
-		}
+        .icon-controls {
+            display: flex;
+            justify-content: center;
+            padding: 12px 24px;
+        }
 
-		.icon-controls__size {
-			display: flex;
-			align-items: center;
+        .icon-controls__size {
+            display: flex;
+            align-items: center;
 
-			& > span {
-				margin-bottom: 6px;
-				margin-right: 16px;
-			}
+            &>span {
+                margin-bottom: 6px;
+                margin-right: 16px;
+            }
 
-			.components-range-control {
-				width: 90px;
+            .components-range-control {
+                width: 90px;
 
-				.components-base-control__field {
-					margin-bottom: 0;
-				}
-			}
-		}
+                .components-base-control__field {
+                    margin-bottom: 0;
+                }
+            }
+        }
 
-		.components-notice {
-			margin: 12px 0 24px;
+        .components-notice {
+            margin: 12px 0 24px;
 
-			// Needed to fix color error in Notice component.
-			&.is-error {
-				background-color: #f8ebea;
-			}
-		}
+            // Needed to fix color error in Notice component.
+            &.is-error {
+                background-color: #f8ebea;
+            }
+        }
 
-		.icon-insert-buttons {
-			display: flex;
-			justify-content: space-between;
-		}
-	}
+        .icon-insert-buttons {
+            display: flex;
+            justify-content: space-between;
+        }
+    }
 }
 
 // Styles for the block's toolbar controls.
 .block-editor-block-toolbar {
-	.bloomedge-icon-block__rotate-button-90 {
-		svg {
-			transform: rotate(90deg);
-		}
-	}
+    .bloomedge-icon-block__rotate-button-90 {
+        svg {
+            transform: rotate(90deg);
+        }
+    }
 
-	.bloomedge-icon-block__rotate-button-180 {
-		svg {
-			transform: rotate(180deg);
-		}
-	}
+    .bloomedge-icon-block__rotate-button-180 {
+        svg {
+            transform: rotate(180deg);
+        }
+    }
 
-	.bloomedge-icon-block__rotate-button-270 {
-		svg {
-			transform: rotate(270deg);
-		}
-	}
+    .bloomedge-icon-block__rotate-button-270 {
+        svg {
+            transform: rotate(270deg);
+        }
+    }
 }
 
 // Styles for the block's inspector controls.
 .block-editor-block-inspector {
-	// Styling for the options panel used for the block settings.
-	.bloomedge-icon-block__main-settings {
-		&.options-panel {
-			border-top: 1px solid #ddd;
-			display: grid;
-			gap: 16px;
-			margin-top: -1px;
-			padding: 16px;
 
-			.options-panel-header {
-				align-items: center;
-				display: flex;
-				flex-direction: row;
-				gap: calc(8px);
-				grid-column: 1 / -1;
-				justify-content: space-between;
-				width: 100%;
-				-webkit-box-align: center;
-				-webkit-box-pack: justify;
+    // Styling for the options panel used for the block settings.
+    .bloomedge-icon-block__main-settings {
+        &.options-panel {
+            border-top: 1px solid #ddd;
+            display: grid;
+            gap: 16px;
+            margin-top: -1px;
+            padding: 16px;
 
-				h2 {
-					font-weight: 500;
-					margin: 0;
-				}
+            .options-panel-header {
+                align-items: center;
+                display: flex;
+                flex-direction: row;
+                gap: calc(8px);
+                grid-column: 1 / -1;
+                justify-content: space-between;
+                width: 100%;
+                -webkit-box-align: center;
+                -webkit-box-pack: justify;
 
-				.options-panel-header__dropdown-menus {
-					line-height: 0;
-					margin: -4px 0;
+                h2 {
+                    font-weight: 500;
+                    margin: 0;
+                }
 
-					.components-button {
-						padding: 0px;
-						min-width: 24px;
+                .options-panel-header__dropdown-menus {
+                    line-height: 0;
+                    margin: -4px 0;
 
-						.bloom-icon {
-							fill: none;
-						}
-					}
-				}
-			}
+                    .components-button {
+                        padding: 0px;
+                        min-width: 24px;
 
-			.options-panel-container {
-				display: grid;
-				grid-gap: 16px;
+                        .bloom-icon {
+                            fill: none;
+                        }
+                    }
+                }
+            }
 
-				.components-base-control {
-					margin: 0;
-				}
+            .options-panel-container {
+                display: grid;
+                grid-gap: 16px;
 
-				.components-base-control__help {
-					margin-bottom: 0;
-				}
-			}
-		}
-	}
+                .components-base-control {
+                    margin: 0;
+                }
 
-	// Styles for color settings.
-	.color-block-support-panel,
-	.bloomedge-icon-block__color-settings {
-		.bloomedge-icon-block__color-settings__help {
-			font-size: 12px;
-			font-style: normal;
-			color: rgb(117, 117, 117);
-			grid-column: 1 / -1;
-			margin-top: 8px;
-			margin-bottom: 24px;
+                .components-base-control__help {
+                    margin-bottom: 0;
+                }
+            }
+        }
+    }
 
-			&:first-child {
-				margin-top: 0;
-			}
-		}
+    // Styles for color settings.
+    .color-block-support-panel,
+    .bloomedge-icon-block__color-settings {
+        .bloomedge-icon-block__color-settings__help {
+            font-size: 12px;
+            font-style: normal;
+            color: rgb(117, 117, 117);
+            grid-column: 1 / -1;
+            margin-top: 8px;
+            margin-bottom: 24px;
 
-		.bloomedge-icon-block__color-settings__apply-fill {
-			grid-column: 1 / -1;
-			margin: 0;
-		}
+            &:first-child {
+                margin-top: 0;
+            }
+        }
 
-		.components-base-control__help {
-			margin-bottom: 0;
-		}
+        .bloomedge-icon-block__color-settings__apply-fill {
+            grid-column: 1 / -1;
+            margin: 0;
+        }
 
-		.block-editor-contrast-checker {
-			margin-top: 24px;
+        .components-base-control__help {
+            margin-bottom: 0;
+        }
 
-			.components-notice__content {
-				margin-right: 0;
-			}
-		}
-	}
+        .block-editor-contrast-checker {
+            margin-top: 24px;
 
-	// Styles for advanced settings.
-	.bloomedge-icon-block__title-control {
-		.components-external-link {
-			display: block;
-			margin-top: 8px;
-		}
-	}
+            .components-notice__content {
+                margin-right: 0;
+            }
+        }
+    }
+
+    // Styles for advanced settings.
+    .bloomedge-icon-block__title-control {
+        .components-external-link {
+            display: block;
+            margin-top: 8px;
+        }
+    }
 }
 
 // Styles for the icon list grid
 .wp-block-bloomedge-icon-inserter__modal,
 .wp-block-bloomedge-icon-inserter__quick-inserter {
-	.icons-list {
-		display: flex;
-		flex-wrap: wrap;
+    .icons-list {
+        display: flex;
+        flex-wrap: wrap;
 
-		.icons-list__item {
-			align-items: stretch;
-			background: transparent;
-			border: 1px solid transparent;
-			border-radius: 2px;
-			color: #1e1e1e;
-			cursor: pointer;
-			display: flex;
-			flex-direction: column;
-			font-size: 13px;
-			height: auto;
-			justify-content: center;
-			padding: 8px;
-			position: relative;
-			transition: all 0.05s ease-in-out;
-			word-break: break-word;
+        .icons-list__item {
+            align-items: stretch;
+            background: transparent;
+            border: 1px solid transparent;
+            border-radius: 2px;
+            color: #1e1e1e;
+            cursor: pointer;
+            display: flex;
+            flex-direction: column;
+            font-size: 13px;
+            height: auto;
+            justify-content: center;
+            padding: 8px;
+            position: relative;
+            transition: all 0.05s ease-in-out;
+            word-break: break-word;
 
-			&:hover {
-				color: var(--wp-admin-theme-color) !important;
-			}
+            &:hover {
+                color: var(--wp-admin-theme-color) !important;
+            }
 
-			&.has-no-icon-fill {
-				svg {
-					fill: none;
-				}
-			}
+            &.has-no-icon-fill {
+                svg {
+                    fill: none;
+                }
+            }
 
-			.icons-list__item-icon {
-				border-radius: 2px;
-				color: #1e1e1e;
-				padding: 12px;
-				transition: all 0.05s ease-in-out;
-			}
+            .icons-list__item-icon {
+                border-radius: 2px;
+                color: #1e1e1e;
+                padding: 12px;
+                transition: all 0.05s ease-in-out;
 
-			.icons-list__item-title {
-				font-size: 12px;
-				padding: 4px 2px 8px;
-				overflow: hidden;
-				text-overflow: ellipsis;
-				white-space: nowrap;
-			}
-		}
-	}
+                .bloom-icon {
+                    fill: none;
+                }
+            }
+
+            .icons-list__item-title {
+                font-size: 12px;
+                padding: 4px 2px 8px;
+                overflow: hidden;
+                text-overflow: ellipsis;
+                white-space: nowrap;
+            }
+        }
+    }
 }
 
 // Styles for the options dropdown popover.
 .options-panel__option-popover {
-	// Same size as core popovers.
-	.components-popover__content {
-		min-width: 240px;
-	}
 
-	.components-menu-item__button {
-		&[aria-disabled="true"]:not(.is-tertiary) {
-			color: #757575;
-			opacity: 1;
+    // Same size as core popovers.
+    .components-popover__content {
+        min-width: 240px;
+    }
 
-			// Fix style bug in WordPress 6.1 and lower.
-			&:focus {
-				box-shadow: none;
-				outline: none;
-			}
-		}
+    .components-menu-item__button {
+        &[aria-disabled="true"]:not(.is-tertiary) {
+            color: #757575;
+            opacity: 1;
 
-		&.has-reset {
-			.components-menu-item__item {
-				min-width: 100%;
-			}
-		}
+            // Fix style bug in WordPress 6.1 and lower.
+            &:focus {
+                box-shadow: none;
+                outline: none;
+            }
+        }
 
-		.components-menu-item__item {
-			.menu-item-reset {
-				color: var(--wp-admin-theme-color-darker-10);
-				font-size: 11px;
-				font-weight: 500;
-				line-height: 1.4;
-				margin-left: auto;
-				text-transform: uppercase;
-			}
-		}
-	}
+        &.has-reset {
+            .components-menu-item__item {
+                min-width: 100%;
+            }
+        }
+
+        .components-menu-item__item {
+            .menu-item-reset {
+                color: var(--wp-admin-theme-color-darker-10);
+                font-size: 11px;
+                font-weight: 500;
+                line-height: 1.4;
+                margin-left: auto;
+                text-transform: uppercase;
+            }
+        }
+    }
 }
 
 // Temporary fix for the replace icon popover. Without this fix, the
 // popover appears over the Media Library modal when opened.
 .bloomedge-icon-block__replace-popover {
-	z-index: 100000;
+    z-index: 100000;
 }

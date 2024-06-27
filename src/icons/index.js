@@ -1998,7 +1998,7 @@ const icons = [
 		isDefault: false,
 		type: 'wordpress',
 		title: __( 'Categories', 'bloom-icon-block' ),
-		icons: [].concat( wordpressSocialIcons, wordpressIcons, SolarIconData ),
+		icons: [].concat( SolarIconData, wordpressSocialIcons, wordpressIcons ),
 		categories: [
 			{
 				name: 'arrows',
@@ -2027,7 +2027,11 @@ const icons = [
 			{
 				name: 'notification',
 				title: __( 'Notification', 'bloom-icon-block' ),
-			}
+			},
+			{
+				name: 'notes',
+				title: __( 'Notes, Documents', 'bloom-icon-block' ),
+			},
 		],
 	},
 ];
