@@ -29,25 +29,13 @@ function bloomedge_icon_block_init()
 }
 add_action('init', 'bloomedge_icon_block_init');
 
-function tabler_icon_register_custom_icons()
-{
-	wp_enqueue_script(
-		'register-tabler-icon-icons',
-		plugins_url('/src/icons/tabler-icons.js', __FILE__),
-		['wp-blocks', 'wp-i18n', 'wp-element', 'wp-components', 'wp-editor'],
-		filemtime(plugin_dir_path(__FILE__) . '/src/icons/tabler-icons.js'),
-		true
-	);
-}
-add_action('enqueue_block_assets', 'tabler_icon_register_custom_icons');
-
 /**
  * Adds Bloom Icon Block to the list of blocks that should be wrapped in a list item
  * if the block is placed in a Navigation menu. This ensures that custom blocks like
  * Bloom Icon Block are correctly formatted within Navigation blocks.
  *
  * @since 1.8.0
- * 
+ *
  * @param array $blocks An array of block names that are allowed to be listed within a Navigation block.
  * @return array The modified array of block names, including 'bloomedge/bloom-icon-block'.
  */
