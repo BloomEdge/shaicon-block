@@ -5,7 +5,7 @@
  * Description:       Effortlessly add SVG icons and graphics to the WordPress block editor.
  * Requires at least: 6.3
  * Requires PHP:      7.0
- * Version:           1.8.0
+ * Version:           1.0.0
  * Author:            BloomEdge
  * Author URI:        https://www.bloomedge.com
  * License:           GPL-2.0-or-later

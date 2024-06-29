@@ -1,6 +1,6 @@
 import { Path, SVG } from "@wordpress/primitives";
 
-export const ReplayBroken = (
+export const ReplayAltBroken = (
 	<SVG
 		viewBox="0 0 24 24"
 		fill="none"

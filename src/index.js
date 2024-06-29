@@ -51,7 +51,7 @@ registerBlockType( { name, ...metadata }, settings );
 /**
  * Make the Icon Block available to Navigation blocks.
  *
- * @since 1.8.0
+ * @since 1.0.0
  *
  * @param {Object} blockSettings The original settings of the block.
  * @param {string} blockName     The name of the block being modified.
