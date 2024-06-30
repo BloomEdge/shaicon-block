@@ -1,7 +1,7 @@
 <?php
 
 /**
- * Plugin Name:       Bloom Icon Block
+ * Plugin Name:       Bloom Icons
  * Description:       Effortlessly add SVG icons and graphics to the WordPress block editor.
  * Requires at least: 6.3
  * Requires PHP:      7.0
@@ -12,7 +12,7 @@
  * License URI:       https://www.gnu.org/licenses/gpl-2.0.html
  * Text Domain:       bloom-icon-block
  *
- * @package           Bloom Icon Block
+ * @package           Bloom Icons
  */
 
 /**

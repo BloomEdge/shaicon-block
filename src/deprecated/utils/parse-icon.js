@@ -4,7 +4,7 @@
 import parse, { domToReact } from 'html-react-parser';
 
 /**
- * The save function for the Icon Block.
+ * The save function for Bloom Icons.
  *
  * @param {string} icon The HTML icon.
  * @return {Object}     The icons as a React object.

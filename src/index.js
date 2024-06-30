@@ -44,12 +44,12 @@ const settings = {
 };
 
 /**
- * Register the Icon Block.
+ * Register Bloom Icons.
  */
 registerBlockType( { name, ...metadata }, settings );
 
 /**
- * Make the Icon Block available to Navigation blocks.
+ * Make Bloom Icons available to Navigation blocks.
  *
  * @since 1.0.0
  *

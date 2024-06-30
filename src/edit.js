@@ -69,7 +69,7 @@ import getIcons from './icons';
 const NEW_TAB_REL = 'noreferrer noopener';
 
 /**
- * The edit function for the Icon Block.
+ * The edit function for Bloom Icons.
  *
  * @param {Object} props All props passed to this function.
  * @return {WPElement}   Element to render.

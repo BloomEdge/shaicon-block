@@ -20,7 +20,7 @@ import getIcons from './icons';
 import { flattenIconsArray, parseIcon } from './utils';
 
 /**
- * The save function for the Icon Block.
+ * The save function for Bloom Icons.
  *
  * @param {Object} props All props passed to this function.
  * @return {WPElement}   Element to render.
