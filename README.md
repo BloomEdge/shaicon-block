@@ -14,6 +14,7 @@ The Shaicon Block plugin simplifies the process of adding custom SVG icons and g
 - **No Additional Block Library Required:** Built using native WordPress components.
 - **Future-Proof:** As WordPress core evolves, the plugin will receive additional functionality.
 - **Custom Icon Libraries:** Register your own custom icon library.
+- **More Icons Are Coming.**
 
 ## Extensibility
 
