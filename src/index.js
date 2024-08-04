@@ -63,7 +63,7 @@ const addToNavigation = ( blockSettings, blockName ) => {
 			...blockSettings,
 			allowedBlocks: [
 				...( blockSettings.allowedBlocks ?? [] ),
-				'bloomedge/bloom-icon-block',
+				'bloomedge/shaicon-block',
 			],
 		};
 	}
@@ -71,6 +71,6 @@ const addToNavigation = ( blockSettings, blockName ) => {
 };
 addFilter(
 	'blocks.registerBlockType',
-	'bloomedge-icon-block-add-to-navigation',
+	'bloomedge-shaicon-block-add-to-navigation',
 	addToNavigation
 );

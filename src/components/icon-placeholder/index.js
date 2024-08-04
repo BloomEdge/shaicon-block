@@ -28,19 +28,19 @@ export default function IconPlaceholder( props ) {
 		const messages = {
 			default: __(
 				'Choose an icon from the library, pick one from your media library, or insert a custom SVG graphic.',
-				'bloom-icon-block'
+				'shaicon-block'
 			),
 			noCustom: __(
 				'Choose an icon from the library or pick one from your media library.',
-				'bloom-icon-block'
+				'shaicon-block'
 			),
 			noMediaLibrary: __(
 				'Choose an icon from the library or insert a custom SVG graphic.',
-				'bloom-icon-block'
+				'shaicon-block'
 			),
 			noCustomNoMediaLibrary: __(
 				'Browse the icon library and choose one to insert.',
-				'bloom-icon-block'
+				'shaicon-block'
 			),
 		};
 
@@ -59,12 +59,12 @@ export default function IconPlaceholder( props ) {
 		<Placeholder
 			className="has-illustration"
 			icon={ bolt }
-			label={ __( 'Icon', 'bloom-icon-block' ) }
+			label={ __( 'Icon', 'shaicon-block' ) }
 			instructions={ instructions() }
 			withIllustration={ true }
 		>
 			<Button isPrimary onClick={ () => setQuickInserterOpen( true ) }>
-				{ __( 'Icon Library', 'bloom-icon-block' ) }
+				{ __( 'Icon Library', 'shaicon-block' ) }
 			</Button>
 			{ isSVGUploadAllowed && (
 				<MediaUpload
@@ -78,7 +78,7 @@ export default function IconPlaceholder( props ) {
 					allowedTypes={ [ 'image/svg+xml' ] }
 					render={ ( { open } ) => (
 						<Button isTertiary onClick={ open }>
-							{ __( 'Open Media Library', 'bloom-icon-block' ) }
+							{ __( 'Open Media Library', 'shaicon-block' ) }
 						</Button>
 					) }
 				/>
@@ -88,7 +88,7 @@ export default function IconPlaceholder( props ) {
 					isTertiary
 					onClick={ () => setCustomInserterOpen( true ) }
 				>
-					{ __( 'Insert custom SVG', 'bloom-icon-block' ) }
+					{ __( 'Insert custom SVG', 'shaicon-block' ) }
 				</Button>
 			) }
 			<QuickInserterPopover

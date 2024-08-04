@@ -1,7 +1,7 @@
 {
 	"apiVersion": 3,
-	"name": "bloomedge/bloom-icon-block",
-	"title": "Bloom Icon",
+	"name": "bloomedge/shaicon-block",
+	"title": "Shaicon Block",
 	"category": "media",
 	"description": "Insert an SVG icon or graphic.",
 	"keywords": [ "icon", "svg" ],

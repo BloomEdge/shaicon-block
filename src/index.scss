@@ -3,7 +3,7 @@
  */
 
 /* Icon Block styles. */
-.wp-block-bloomedge-bloom-icon-block {
+.wp-block-bloomedge-shaicon-block {
     display: flex;
     line-height: 0;
 
@@ -48,37 +48,37 @@
     }
 
     svg {
-        transform: rotate(var(--bloomedge--icon-block--transform-rotate, 0deg)) scaleX(var(--bloomedge--icon-block--transform-scale-x, 1)) scaleY(var(--bloomedge--icon-block--transform-scale-y, 1));
+        transform: rotate(var(--bloomedge--shaicon-block--transform-rotate, 0deg)) scaleX(var(--bloomedge--shaicon-block--transform-scale-x, 1)) scaleY(var(--bloomedge--shaicon-block--transform-scale-y, 1));
     }
 
     &.rotate-90,
     .rotate-90 {
-        --bloomedge--icon-block--transform-rotate: 90deg;
+        --bloomedge--shaicon-block--transform-rotate: 90deg;
     }
 
     &.rotate-180,
     .rotate-180 {
-        --bloomedge--icon-block--transform-rotate: 180deg;
+        --bloomedge--shaicon-block--transform-rotate: 180deg;
     }
 
     &.rotate-270,
     .rotate-270 {
-        --bloomedge--icon-block--transform-rotate: 270deg;
+        --bloomedge--shaicon-block--transform-rotate: 270deg;
     }
 
     &.flip-horizontal,
     .flip-horizontal {
-        --bloomedge--icon-block--transform-scale-x: -1;
+        --bloomedge--shaicon-block--transform-scale-x: -1;
     }
 
     &.flip-vertical,
     .flip-vertical {
-        --bloomedge--icon-block--transform-scale-y: -1;
+        --bloomedge--shaicon-block--transform-scale-y: -1;
     }
 
     &.flip-vertical.flip-horizontal,
     .flip-vertical.flip-horizontal {
-        --bloomedge--icon-block--transform-scale-x: -1;
-        --bloomedge--icon-block--transform-scale-y: -1;
+        --bloomedge--shaicon-block--transform-scale-x: -1;
+        --bloomedge--shaicon-block--transform-scale-y: -1;
     }
 }

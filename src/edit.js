@@ -228,9 +228,9 @@ export function Edit( props ) {
 		<DropdownMenu
 			icon=""
 			popoverProps={ {
-				className: 'bloomedge-icon-block__replace-popover is-alternate',
+				className: 'bloomedge-shaicon-block__replace-popover is-alternate',
 			} }
-			text={ __( 'Replace', 'bloom-icon-block' ) }
+			text={ __( 'Replace', 'shaicon-block' ) }
 		>
 			{ ( { onClose } ) => (
 				<>
@@ -242,7 +242,7 @@ export function Edit( props ) {
 							} }
 							icon={ defaultIcon }
 						>
-							{ __( 'Browse icon library', 'bloom-icon-block' ) }
+							{ __( 'Browse icon library', 'shaicon-block' ) }
 						</MenuItem>
 						{ isSVGUploadAllowed && (
 							<MediaUpload
@@ -262,7 +262,7 @@ export function Edit( props ) {
 									>
 										{ __(
 											'Open Media Library',
-											'bloom-icon-block'
+											'shaicon-block'
 										) }
 									</MenuItem>
 								) }
@@ -278,7 +278,7 @@ export function Edit( props ) {
 							>
 								{ __(
 									'Add/edit custom icon',
-									'bloom-icon-block'
+									'shaicon-block'
 								) }
 							</MenuItem>
 						) }
@@ -293,7 +293,7 @@ export function Edit( props ) {
 								onClose( true );
 							} }
 						>
-							{ __( 'Clear icon', 'bloom-icon-block' ) }
+							{ __( 'Clear icon', 'shaicon-block' ) }
 						</MenuItem>
 					</MenuGroup>
 				</>
@@ -318,7 +318,7 @@ export function Edit( props ) {
 						<ToolbarButton
 							name="link"
 							icon={ link }
-							title={ __( 'Link', 'bloom-icon-block' ) }
+							title={ __( 'Link', 'shaicon-block' ) }
 							shortcut={ displayShortcut.primary( 'k' ) }
 							onClick={ startEditing }
 							isActive={ isURLSet }
@@ -326,9 +326,9 @@ export function Edit( props ) {
 					</ToolbarGroup>
 					<ToolbarGroup className="components-toolbar-group">
 						<ToolbarButton
-							className={ `bloomedge-icon-block__rotate-button-${ rotate }` }
+							className={ `bloomedge-shaicon-block__rotate-button-${ rotate }` }
 							icon={ rotateRight }
-							label={ __( 'Rotate', 'bloom-icon-block' ) }
+							label={ __( 'Rotate', 'shaicon-block' ) }
 							onClick={ () => setRotate( rotate ) }
 							isPressed={ rotate }
 						/>
@@ -336,7 +336,7 @@ export function Edit( props ) {
 							icon={ flipH }
 							label={ __(
 								'Flip Horizontal',
-								'bloom-icon-block'
+								'shaicon-block'
 							) }
 							onClick={ () =>
 								setAttributes( {
@@ -347,7 +347,7 @@ export function Edit( props ) {
 						/>
 						<ToolbarButton
 							icon={ flipV }
-							label={ __( 'Flip Vertical', 'bloom-icon-block' ) }
+							label={ __( 'Flip Vertical', 'shaicon-block' ) }
 							onClick={ () =>
 								setAttributes( {
 									flipVertical: ! flipVertical,
@@ -365,7 +365,7 @@ export function Edit( props ) {
 									setInserterOpen( true );
 								} }
 							>
-								{ __( 'Replace', 'bloom-icon-block' ) }
+								{ __( 'Replace', 'shaicon-block' ) }
 							</ToolbarButton>
 						) }
 					</ToolbarGroup>
@@ -406,7 +406,7 @@ export function Edit( props ) {
 
 	const colorSettings = [
 		{
-			colorLabel: __( 'Icon color', 'bloom-icon-block' ),
+			colorLabel: __( 'Icon color', 'shaicon-block' ),
 			colorValue: iconColor.color || iconColorValue,
 			onChange: ( colorValue ) => {
 				setIconColor( colorValue );
@@ -420,7 +420,7 @@ export function Edit( props ) {
 			},
 		},
 		{
-			colorLabel: __( 'Background color', 'bloom-icon-block' ),
+			colorLabel: __( 'Background color', 'shaicon-block' ),
 			colorValue: iconBackgroundColor.color || iconBackgroundColorValue,
 			colorGradientValue: gradientValue,
 			onChange: ( colorValue ) => {
@@ -447,31 +447,31 @@ export function Edit( props ) {
 		<>
 			<InspectorControls group="settings">
 				<OptionsPanel
-					className="bloomedge-icon-block__main-settings"
-					label={ __( 'Settings', 'bloom-icon-block' ) }
+					className="bloomedge-shaicon-block__main-settings"
+					label={ __( 'Settings', 'shaicon-block' ) }
 					options={ [
 						{
 							attributeSlug: 'label',
-							label: __( 'Label', 'bloom-icon-block' ),
+							label: __( 'Label', 'shaicon-block' ),
 							isDefault: true,
 						},
 						{
 							attributeSlug: 'width',
-							label: __( 'Width', 'bloom-icon-block' ),
+							label: __( 'Width', 'shaicon-block' ),
 							isDefault: true,
 						},
 						{
 							attributeSlug: 'height',
-							label: __( 'Height', 'bloom-icon-block' ),
+							label: __( 'Height', 'shaicon-block' ),
 						},
 					] }
 					{ ...props }
 				>
 					<TextControl
-						label={ __( 'Label', 'bloom-icon-block' ) }
+						label={ __( 'Label', 'shaicon-block' ) }
 						help={ __(
 							'Briefly describe the icon to help screen reader users.',
-							'bloom-icon-block'
+							'shaicon-block'
 						) }
 						value={ label || '' }
 						onChange={ ( value ) =>
@@ -479,7 +479,7 @@ export function Edit( props ) {
 						}
 					/>
 					<DimensionControl
-						label={ __( 'Width', 'bloom-icon-block' ) }
+						label={ __( 'Width', 'shaicon-block' ) }
 						value={ width }
 						onChange={ ( value ) =>
 							setAttributes( { width: value } )
@@ -487,7 +487,7 @@ export function Edit( props ) {
 					/>
 					{ height !== undefined && (
 						<DimensionControl
-							label={ __( 'Height', 'bloom-icon-block' ) }
+							label={ __( 'Height', 'shaicon-block' ) }
 							value={ height }
 							onChange={ ( value ) =>
 								setAttributes( { height: value } )
@@ -530,22 +530,22 @@ export function Edit( props ) {
 					) }
 					{ ( iconColor.color || iconColorValue ) && (
 						<>
-							<p className="bloomedge-icon-block__color-settings__help">
+							<p className="bloomedge-shaicon-block__color-settings__help">
 								{ __(
 									'Any color or fill values in the SVG icon itself will take precedent over the chosen color.',
-									'bloom-icon-block'
+									'shaicon-block'
 								) }
 							</p>
 							<ToggleControl
-								className="bloomedge-icon-block__color-settings__apply-fill"
+								className="bloomedge-shaicon-block__color-settings__apply-fill"
 								checked={ ! hasNoIconFill }
 								label={ __(
 									`Apply icon color to fill`,
-									'bloom-icon-block'
+									'shaicon-block'
 								) }
 								help={ __(
 									'Set the SVG fill value to the chosen icon color. Disable as needed.',
-									'bloom-icon-block'
+									'shaicon-block'
 								) }
 								onChange={ () =>
 									setAttributes( {
@@ -566,27 +566,27 @@ export function Edit( props ) {
 			) }
 			<InspectorControls group="advanced">
 				<TextControl
-					label={ __( 'Link rel', 'bloom-icon-block' ) }
+					label={ __( 'Link rel', 'shaicon-block' ) }
 					value={ linkRel || '' }
 					onChange={ ( value ) =>
 						setAttributes( { linkRel: value } )
 					}
 				/>
 				<TextControl
-					label={ __( 'Title attribute', 'bloom-icon-block' ) }
-					className="bloomedge-icon-block__title-control"
+					label={ __( 'Title attribute', 'shaicon-block' ) }
+					className="bloomedge-shaicon-block__title-control"
 					value={ title || '' }
 					onChange={ ( value ) => setAttributes( { title: value } ) }
 					help={
 						<>
 							{ __(
 								'Describe the role of this icon on the page.',
-								'bloom-icon-block'
+								'shaicon-block'
 							) }
 							<ExternalLink href="https://www.w3.org/TR/html52/dom.html#the-title-attribute">
 								{ __(
 									'Note: many devices and browsers do not display this text',
-									'bloom-icon-block'
+									'shaicon-block'
 								) }
 							</ExternalLink>
 						</>

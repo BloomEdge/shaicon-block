@@ -59,21 +59,21 @@ export default function CustomInserterModal( props ) {
 
 	return (
 		<Modal
-			className="wp-block-bloomedge-icon-custom-inserter__modal"
-			title={ __( 'Custom Icon', 'bloom-icon-block' ) }
+			className="wp-block-bloomedge-shaicon-block-custom-inserter__modal"
+			title={ __( 'Custom Icon', 'shaicon-block' ) }
 			onRequestClose={ () => setCustomInserterOpen( false ) }
 			isFullScreen
 		>
 			<div className="icon-custom-inserter">
 				<div className="icon-custom-inserter__content">
 					<TextareaControl
-						label={ __( 'Custom icon', 'bloom-icon-block' ) }
+						label={ __( 'Custom icon', 'shaicon-block' ) }
 						hideLabelFromVision={ true }
 						value={ customIcon }
 						onChange={ setCustomIcon }
 						placeholder={ __(
 							'Paste the SVG code for your custom icon.',
-							'bloom-icon-block'
+							'shaicon-block'
 						) }
 					/>
 				</div>
@@ -89,7 +89,7 @@ export default function CustomInserterModal( props ) {
 						<div className="icon-controls">
 							<div className="icon-controls__size">
 								<span>
-									{ __( 'Preview size', 'bloom-icon-block' ) }
+									{ __( 'Preview size', 'shaicon-block' ) }
 								</span>
 								<RangeControl
 									min={ 24 }
@@ -106,7 +106,7 @@ export default function CustomInserterModal( props ) {
 							<Notice status="error" isDismissible={ false }>
 								{ __(
 									'The custom icon does not appear to be in a valid SVG format or contains non-SVG elements.',
-									'bloom-icon-block'
+									'shaicon-block'
 								) }
 							</Notice>
 						) }
@@ -115,24 +115,24 @@ export default function CustomInserterModal( props ) {
 						<Button
 							label={ __(
 								'Clear custom icon',
-								'bloom-icon-block'
+								'shaicon-block'
 							) }
 							isSecondary
 							disabled={ ! customIcon }
 							onClick={ () => setCustomIcon( '' ) }
 						>
-							{ __( 'Clear', 'bloom-icon-block' ) }
+							{ __( 'Clear', 'shaicon-block' ) }
 						</Button>
 						<Button
 							label={ __(
 								'Insert custom icon',
-								'bloom-icon-block'
+								'shaicon-block'
 							) }
 							isPrimary
 							disabled={ ! isSVG || ! customIcon }
 							onClick={ insertCustomIcon }
 						>
-							{ __( 'Insert custom icon', 'bloom-icon-block' ) }
+							{ __( 'Insert custom icon', 'shaicon-block' ) }
 						</Button>
 					</div>
 				</div>

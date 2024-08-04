@@ -48,8 +48,8 @@ export default function IconDropZone( props ) {
 	}
 
 	const label = isSVGUploadAllowed
-		? __( 'Drop SVG file to upload', 'bloom-icon-block' )
-		: __( 'Drop SVG file to insert', 'bloom-icon-block' );
+		? __( 'Drop SVG file to upload', 'shaicon-block' )
+		: __( 'Drop SVG file to insert', 'shaicon-block' );
 
 	return <DropZone label={ label } onFilesDrop={ onDropFiles } />;
 }

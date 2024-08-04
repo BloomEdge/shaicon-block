@@ -115,7 +115,7 @@ export default function InserterModal( props ) {
 			categories.sort().unshift( allCategory );
 			categoriesFull.unshift( {
 				name: allCategory,
-				title: __( 'All', 'bloom-icon-block' ),
+				title: __( 'All', 'shaicon-block' ),
 			} );
 		}
 
@@ -236,8 +236,8 @@ export default function InserterModal( props ) {
 
 	return (
 		<Modal
-			className="wp-block-bloomedge-icon-inserter__modal"
-			title={ __( 'Icon Library', 'bloom-icon-block' ) }
+			className="wp-block-bloomedge-shaicon-block-inserter__modal"
+			title={ __( 'Icon Library', 'shaicon-block' ) }
 			onRequestClose={ () => setInserterOpen( false ) }
 			isFullScreen
 		>
@@ -271,7 +271,7 @@ export default function InserterModal( props ) {
 											'%1$s search result for "%2$s"',
 											'%1$s search results for "%2$s"',
 											shownIcons.length,
-											'bloom-icon-block'
+											'shaicon-block'
 										),
 										shownIcons.length,
 										searchInput
@@ -281,7 +281,7 @@ export default function InserterModal( props ) {
 						<div className="icon-controls">
 							<div className="icon-controls__size">
 								<span>
-									{ __( 'Preview size', 'bloom-icon-block' ) }
+									{ __( 'Preview size', 'shaicon-block' ) }
 								</span>
 								<RangeControl
 									min={ 24 }

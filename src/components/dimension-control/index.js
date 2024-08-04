@@ -97,7 +97,7 @@ export default function DimensionControl( { onChange, label, units, value } ) {
 	return (
 		<fieldset className="components-dimension-control">
 			<BaseControl.VisualLabel as="legend">
-				{ label || __( 'Dimension', 'bloom-icon-block' ) }
+				{ label || __( 'Dimension', 'shaicon-block' ) }
 			</BaseControl.VisualLabel>
 			<Flex>
 				<FlexItem isBlock>

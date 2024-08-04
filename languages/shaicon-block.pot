@@ -1,8 +1,8 @@
-# Copyright (C) 2024 BloomEdge
+# Copyright (C) 2024 Md Habibur Rahman
 # This file is distributed under the GPL-2.0-or-later.
 msgid ""
 msgstr ""
-"Project-Id-Version: Bloom Icon Block 1.0.0\n"
+"Project-Id-Version: Shaicon Block 1.0.0\n"
 "Report-Msgid-Bugs-To: https://wordpress.org/support/plugin/icon-library\n"
 "Last-Translator: FULL NAME <EMAIL@ADDRESS>\n"
 "Language-Team: LANGUAGE <LL@li.org>\n"
@@ -12,10 +12,10 @@ msgstr ""
 "POT-Creation-Date: 2024-06-30T08:25:49+00:00\n"
 "PO-Revision-Date: YEAR-MO-DA HO:MI+ZONE\n"
 "X-Generator: WP-CLI 2.9.0\n"
-"X-Domain: bloom-icon-block\n"
+"X-Domain: shaicon-block\n"
 
 #. Plugin Name of the plugin
-msgid "Bloom Icon Block"
+msgid "Shaicon Block"
 msgstr ""
 
 #. Description of the plugin
@@ -23,11 +23,11 @@ msgid "Effortlessly add SVG icons and graphics to the WordPress block editor."
 msgstr ""
 
 #. Author of the plugin
-msgid "BloomEdge"
+msgid "shakibdshy"
 msgstr ""
 
 #. Author URI of the plugin
-msgid "https://www.bloomedge.com"
+msgid "https://github.com/shakibdshy"
 msgstr ""
 
 #: build/index.js:1

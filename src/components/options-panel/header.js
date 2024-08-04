@@ -56,7 +56,7 @@ export default function OptionsPanelHeader( props ) {
 		<DropdownMenu
 			className="options-dropdown"
 			icon={ activeOptions.length === 0 ? plus : moreVertical }
-			label={ __( 'Setting options', 'bloom-icon-block' ) }
+			label={ __( 'Setting options', 'shaicon-block' ) }
 			popoverProps={ {
 				className: 'options-panel__option-popover',
 				focusOnMount: 'container',
@@ -67,7 +67,7 @@ export default function OptionsPanelHeader( props ) {
 				<>
 					{ defaultOptions.length !== 0 && (
 						<MenuGroup
-							label={ __( 'Defaults', 'bloom-icon-block' ) }
+							label={ __( 'Defaults', 'shaicon-block' ) }
 						>
 							{ defaultOptions.map( ( option, index ) => (
 								<DefaultOptionMenuItem
@@ -78,7 +78,7 @@ export default function OptionsPanelHeader( props ) {
 							) ) }
 						</MenuGroup>
 					) }
-					<MenuGroup label={ __( 'Options', 'bloom-icon-block' ) }>
+					<MenuGroup label={ __( 'Options', 'shaicon-block' ) }>
 						{ generalOptions.map( ( option, index ) => (
 							<OptionMenuItem
 								key={ index }
@@ -97,7 +97,7 @@ export default function OptionsPanelHeader( props ) {
 							} }
 							variant="tertiary"
 						>
-							{ __( 'Reset all', 'bloom-icon-block' ) }
+							{ __( 'Reset all', 'shaicon-block' ) }
 						</MenuItem>
 					</MenuGroup>
 				</>
@@ -131,7 +131,7 @@ function OptionMenuItem( props ) {
 			icon={ option.isActive && check }
 			label={ sprintf(
 				// translators: %s: The name of the option being toggled e.g. "Label".
-				__( 'Toggle %s', 'bloom-icon-block' ),
+				__( 'Toggle %s', 'shaicon-block' ),
 				option.label
 			) }
 			onClick={ () => {
@@ -139,7 +139,7 @@ function OptionMenuItem( props ) {
 				speak(
 					sprintf(
 						// translators: %s: The name of the option being toggled e.g. "Label".
-						__( '%s toggled', 'bloom-icon-block' ),
+						__( '%s toggled', 'shaicon-block' ),
 						option.label
 					),
 					'assertive'
@@ -169,7 +169,7 @@ function DefaultOptionMenuItem( props ) {
 				className="has-reset"
 				label={ sprintf(
 					// translators: %s: The name of the option being reset e.g. "Label".
-					__( 'Reset %s', 'bloom-icon-block' ),
+					__( 'Reset %s', 'shaicon-block' ),
 					option.label
 				) }
 				onClick={ () => {
@@ -177,7 +177,7 @@ function DefaultOptionMenuItem( props ) {
 					speak(
 						sprintf(
 							// translators: %s: The name of the option being reset e.g. "Label".
-							__( '%s reset to default', 'bloom-icon-block' ),
+							__( '%s reset to default', 'shaicon-block' ),
 							option.label
 						),
 						'assertive'
@@ -188,7 +188,7 @@ function DefaultOptionMenuItem( props ) {
 				{ option.label }
 				{ option.hasEdits && (
 					<span aria-hidden="true" className="menu-item-reset">
-						{ __( 'Reset', 'bloom-icon-block' ) }
+						{ __( 'Reset', 'shaicon-block' ) }
 					</span>
 				) }
 			</MenuItem>

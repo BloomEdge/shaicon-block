@@ -102,7 +102,7 @@ export default function QuickInserterPopover( props ) {
 					return (
 						<Button
 							key={ `icon-${ icon.name }` }
-							label={ __( 'Insert Icon', 'bloom-icon-block' ) }
+							label={ __( 'Insert Icon', 'shaicon-block' ) }
 							className={ classnames(
 								'icons-list__item',
 								'block-editor-block-types-list__item',
@@ -144,14 +144,14 @@ export default function QuickInserterPopover( props ) {
 
 	return (
 		<Popover
-			className="wp-block-bloomedge-icon-inserter__quick-inserter block-editor-inserter__popover is-quick"
+			className="wp-block-bloomedge-shaicon-block-inserter__quick-inserter block-editor-inserter__popover is-quick"
 			onClose={ () => setQuickInserterOpen( false ) }
 			position="bottom center"
 		>
 			<div className="block-editor-inserter__quick-inserter">
 				<SearchControl
 					className="block-editor-inserter__search"
-					label={ __( 'Search icons', 'bloom-icon-block' ) }
+					label={ __( 'Search icons', 'shaicon-block' ) }
 					hideLabelFromVision={ true }
 					value={ searchInput }
 					onChange={ ( value ) => setSearchInput( value ) }
@@ -170,7 +170,7 @@ export default function QuickInserterPopover( props ) {
 						setSearchInput( '' );
 					} }
 				>
-					{ __( 'Browse all', 'bloom-icon-block' ) }
+					{ __( 'Browse all', 'shaicon-block' ) }
 				</Button>
 			</div>
 		</Popover>

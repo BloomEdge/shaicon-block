@@ -3,7 +3,7 @@
  */
 
 // Editor specific styles for the block itself.
-.wp-block-bloomedge-bloom-icon-block {
+.wp-block-bloomedge-shaicon-block {
 
     // Dropzone styles.
     .components-drop-zone__content {
@@ -75,7 +75,7 @@
     }
 }
 
-.wp-block-bloomedge-icon-inserter__quick-inserter {
+.wp-block-bloomedge-shaicon-block-inserter__quick-inserter {
     .icons-list {
         .icons-list__item {
             width: 33.33%;
@@ -101,7 +101,7 @@
 }
 
 // Style for the icon library modal.
-.wp-block-bloomedge-icon-inserter__modal {
+.wp-block-bloomedge-shaicon-block-inserter__modal {
     .components-modal__header {
         border-bottom: 2px solid var(--wp--preset--color--contrast-2, #1e1e1e);
         padding: 24px 32px;
@@ -297,7 +297,7 @@
 }
 
 // Styles for the custom SVG inserter modal.
-.wp-block-bloomedge-icon-custom-inserter__modal {
+.wp-block-bloomedge-shaicon-block-custom-inserter__modal {
     .components-modal__content {
         flex: 1 1 0%;
         overflow: auto;
@@ -416,19 +416,19 @@
 
 // Styles for the block's toolbar controls.
 .block-editor-block-toolbar {
-    .bloomedge-icon-block__rotate-button-90 {
+    .bloomedge-shaicon-block__rotate-button-90 {
         svg {
             transform: rotate(90deg);
         }
     }
 
-    .bloomedge-icon-block__rotate-button-180 {
+    .bloomedge-shaicon-block__rotate-button-180 {
         svg {
             transform: rotate(180deg);
         }
     }
 
-    .bloomedge-icon-block__rotate-button-270 {
+    .bloomedge-shaicon-block__rotate-button-270 {
         svg {
             transform: rotate(270deg);
         }
@@ -439,7 +439,7 @@
 .block-editor-block-inspector {
 
     // Styling for the options panel used for the block settings.
-    .bloomedge-icon-block__main-settings {
+    .bloomedge-shaicon-block__main-settings {
         &.options-panel {
             border-top: 1px solid #ddd;
             display: grid;
@@ -495,8 +495,8 @@
 
     // Styles for color settings.
     .color-block-support-panel,
-    .bloomedge-icon-block__color-settings {
-        .bloomedge-icon-block__color-settings__help {
+    .bloomedge-shaicon-block__color-settings {
+        .bloomedge-shaicon-block__color-settings__help {
             font-size: 12px;
             font-style: normal;
             color: rgb(117, 117, 117);
@@ -509,7 +509,7 @@
             }
         }
 
-        .bloomedge-icon-block__color-settings__apply-fill {
+        .bloomedge-shaicon-block__color-settings__apply-fill {
             grid-column: 1 / -1;
             margin: 0;
         }
@@ -528,7 +528,7 @@
     }
 
     // Styles for advanced settings.
-    .bloomedge-icon-block__title-control {
+    .bloomedge-shaicon-block__title-control {
         .components-external-link {
             display: block;
             margin-top: 8px;
@@ -537,8 +537,8 @@
 }
 
 // Styles for the icon list grid
-.wp-block-bloomedge-icon-inserter__modal,
-.wp-block-bloomedge-icon-inserter__quick-inserter {
+.wp-block-bloomedge-shaicon-block-inserter__modal,
+.wp-block-bloomedge-shaicon-block-inserter__quick-inserter {
     .icons-list {
         display: flex;
         flex-wrap: wrap;
@@ -633,6 +633,6 @@
 
 // Temporary fix for the replace icon popover. Without this fix, the
 // popover appears over the Media Library modal when opened.
-.bloomedge-icon-block__replace-popover {
+.bloomedge-shaicon-block__replace-popover {
     z-index: 100000;
 }
