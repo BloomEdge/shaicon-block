@@ -3,8 +3,8 @@
 /**
  * Plugin Name:       Shaicon Block
  * Description:       Effortlessly add SVG icons and graphics to the WordPress block editor.
- * Requires at least: 6.3
- * Requires PHP:      7.0
+ * Requires at least: 6.4
+ * Requires PHP:      7.4
  * Version:           1.0.0
  * Author:            Md Habibur Rahman
  * Author URI:        https://github.com/shakibdshy
