@@ -22,7 +22,7 @@ The Shaicon Block plugin simplifies the process of adding custom SVG icons and g
 * **Custom Icon Libraries:** Register your own custom icon library.
 
 === Stay Connected ===
-* [View on GitHub](https://github.com/shakibdshy)
+* [View on GitHub](https://github.com/BloomEdge/shaicon-block)
 
 == Frequently Asked Questions ==
 
