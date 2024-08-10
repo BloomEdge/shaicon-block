@@ -1,5 +1,5 @@
 === Shaicon Block ===
-Contributors:      shakibdshy
+Contributors:      shakibdshy, bloomedge24
 Tags:              icon, shaicon, icon block, SVG, SVG block, block
 Requires at least: 6.4
 Tested up to:      6.6
@@ -23,6 +23,12 @@ The Shaicon Block plugin simplifies the process of adding custom SVG icons and g
 
 === Stay Connected ===
 * [View on GitHub](https://github.com/BloomEdge/shaicon-block)
+
+=== Screenshots ===
+1. Shaicon Block Includes Icon Consols such as Color, Size, rotation, alignment, padding and border-radius view screenshot-1.png
+2. Include WordPress Icon and Solar Icon Library view screenshot-2.png
+3. Use the `quick inserter` to pick the icon you need view screenshot-3.png
+
 
 == Frequently Asked Questions ==
 
