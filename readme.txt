@@ -8,18 +8,20 @@ Stable tag:        1.0.0
 License:           GPL-2.0-or-later
 License URI:       https://www.gnu.org/licenses/gpl-2.0.html
 
-**Shaicon Block Plugin for WordPress**
+== Shaicon Block Plugin for WordPress ==
 
 The Shaicon Block plugin simplifies the process of adding custom SVG icons and graphics to the WordPress block editor (Gutenberg). It offers the following key features:
 
-* **290+ Native WordPress Icons:** Access a library of native WordPress icons, including social logos.
-* **120+ Solar Icons:** To enhance your WordPress project, leverage the Solar Icon library for additional icons and graphics.
-* **Custom SVG Support:** Use your own custom SVG icons or graphics.
-* **Icon Controls:** Enjoy convenient controls for linking, rotating, aligning, adjusting colors, borders, padding, and margins.
-* **Site Editor Compatibility:** The plugin works seamlessly with the Site Editor.
-* **No Additional Block Library Required:** Built using native WordPress components.
-* **Future-Proof:** As WordPress core evolves, the plugin will receive additional functionality.
-* **Custom Icon Libraries:** Register your own custom icon library.
+=== Features ===
+
+* 290+ Native WordPress Icons: Access a library of native WordPress icons, including social logos.
+* 120+ Solar Icons: To enhance your WordPress project, leverage the Solar Icon library for additional icons and graphics.
+* Custom SVG Support: Use your own custom SVG icons or graphics.
+* Icon Controls: Enjoy convenient controls for linking, rotating, aligning, adjusting colors, borders, padding, and margins.
+* Site Editor Compatibility: The plugin works seamlessly with the Site Editor.
+* No Additional Block Library Required: Built using native WordPress components.
+* Future-Proof: As WordPress core evolves, the plugin will receive additional functionality.
+* Custom Icon Libraries: Register your own custom icon library.
 
 === Stay Connected ===
 * [View on GitHub](https://github.com/BloomEdge/shaicon-block)
